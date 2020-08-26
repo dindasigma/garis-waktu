@@ -1,0 +1,744 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+@font-face {
+  font-family: 'fontello';
+  src: url('fonts/fontello.eot?88423925');
+  src: url('fonts/fontello.eot?88423925#iefix') format('embedded-opentype'),
+  url('fonts/fontello.woff?88423925') format('woff'),
+  url('fonts/fontello.ttf?88423925') format('truetype'),
+  url('fonts/fontello.svg?88423925#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Reset
+-------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+timeline, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  -webkit-font-smoothing: antialiased;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+::-moz-selection {
+  color: #fff;
+  background: #141414;
+}
+
+::selection {
+  color: #fff;
+  background: #141414;
+}
+
+:focus, a {
+  -moz-outline-style: none;
+  outline: none;
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+}
+
+/* Fonts
+-------------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+strong, b {
+  font-weight: normal;
+}
+
+em, i {
+  font-style: normal;
+  white-space: nowrap;
+}
+p {
+  margin-top: 1em;
+}
+
+code {
+  font-family: "Lucida Console", Monaco, monospace;
+  font-weight: normal;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+  background: -webkit-linear-gradient(left, rgba(184,255,243,0.9), rgba(184,255,243,1));
+  background: linear-gradient(to right, rgba(184,255,243,1), rgba(184,255,243,1));
+  background-size: 300% 40%;
+  background-repeat: no-repeat;
+  background-position: -5% 100%;
+  -webkit-transition-property: background-position;
+  transition-property: background-position;
+  -webkit-transition-duration: 300ms;
+  transition-duration: 300ms;
+  padding: 0 5px 0 0;;
+  color: #666;
+}
+
+a:hover {
+  background: -webkit-linear-gradient(left, rgba(184,255,243,1), rgba(184,255,243,1));
+  background: linear-gradient(to right, rgba(184,255,243,1), rgba(184,255,243,1));
+  background-size: 300% 40%;
+  background-repeat: no-repeat;
+  background-position: 0% 100%;
+  padding: 0 5px 0 0;
+  color: #666;
+}
+
+/* Base
+----------------------------------------------- */
+
+body, select {
+  color: #141414;
+  background: #fff;
+  font-family: 'Cardo', serif;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 1.5em;
+  xletter-spacing: -0.0125em; /* no */
+  xletter-spacing: -0.0175em; /* ok */
+  letter-spacing: -0.025em; /* original, tightest, tho resembles helvetica */
+}
+
+select {
+  background: transparent;
+  x-webkit-appearance: menulist-button;
+  xline-height: 2em;
+}
+
+a:link, a:visited {
+  color: #141414;
+  text-decoration: none;
+}
+
+a:hover, a:active {
+  color: #141414;
+}
+
+code {
+  font-size: 18px;
+  line-height: 1em;
+}
+
+/* Container
+----------------------------------------------- */
+
+#container {
+  margin-left: 0;
+  margin-right: 0;
+  height: auto;
+  width: auto;
+}
+
+/* Header : Name
+----------------------------------------------- */
+
+#name {
+  float: left;
+}
+
+#name {
+  position: fixed;
+  width: auto;
+  left: 1.2em;
+  top: 50%;
+  z-index: 4;
+}
+
+#name a {
+  text-decoration: none;
+  background: none;
+}
+
+.glitch {
+  color: #000;
+  font-size: 50px;
+  position: relative;
+  line-height: 1;
+  width: 12.5rem;
+  font-family: 'Dancing Script', cursive;
+  font-style: italic;
+
+}
+
+.glitch:before {
+    content: attr(data-text);
+    position: absolute;
+    left: 2px;
+    text-shadow: 1px 0 #4e73df;
+    top: 0;
+    color: #000;
+    background: #fff;
+    overflow: hidden;
+    clip: rect(0,900px,0,0);
+    animation: noise-anim-2 3s infinite linear alternate-reverse;
+}
+.glitch:after {
+    content: attr(data-text);
+    position: absolute;
+    left: 2px;
+    text-shadow: -1px 0 #e74a3b;
+    top: 0;
+    color: #000;
+    background: #fff;
+    overflow: hidden;
+    clip: rect(0,900px,0,0);
+    animation: noise-anim 2s infinite linear alternate-reverse;
+}
+
+@-webkit-keyframes noise-anim{
+  0%{clip:rect(89px,9999px,100px,0)}
+  5%{clip:rect(4px,9999px,62px,0)}
+  10%{clip:rect(43px,9999px,16px,0)}
+  15%{clip:rect(2px,9999px,68px,0)}
+  20%{clip:rect(12px,9999px,6px,0)}
+  25%{clip:rect(89px,9999px,25px,0)}
+  30%{clip:rect(15px,9999px,38px,0)}
+  35%{clip:rect(57px,9999px,97px,0)}
+  40%{clip:rect(24px,9999px,72px,0)}
+  45%{clip:rect(81px,9999px,3px,0)}
+  50%{clip:rect(93px,9999px,26px,0)}
+  55%{clip:rect(68px,9999px,85px,0)}
+  60%{clip:rect(43px,9999px,28px,0)}
+  65%{clip:rect(44px,9999px,11px,0)}
+  70%{clip:rect(17px,9999px,33px,0)}
+  75%{clip:rect(74px,9999px,66px,0)}
+  80%{clip:rect(100px,9999px,4px,0)}
+  85%{clip:rect(92px,9999px,31px,0)}
+  90%{clip:rect(93px,9999px,98px,0)}
+  95%{clip:rect(23px,9999px,77px,0)}
+  100%{clip:rect(92px,9999px,8px,0)}
+}
+
+@keyframes noise-anim{
+  0%{clip:rect(89px,9999px,100px,0)}
+  5%{clip:rect(4px,9999px,62px,0)}
+  10%{clip:rect(43px,9999px,16px,0)}
+  15%{clip:rect(2px,9999px,68px,0)}
+  20%{clip:rect(12px,9999px,6px,0)}
+  25%{clip:rect(89px,9999px,25px,0)}
+  30%{clip:rect(15px,9999px,38px,0)}
+  35%{clip:rect(57px,9999px,97px,0)}
+  40%{clip:rect(24px,9999px,72px,0)}
+  45%{clip:rect(81px,9999px,3px,0)}
+  50%{clip:rect(93px,9999px,26px,0)}
+  55%{clip:rect(68px,9999px,85px,0)}
+  60%{clip:rect(43px,9999px,28px,0)}
+  65%{clip:rect(44px,9999px,11px,0)}
+  70%{clip:rect(17px,9999px,33px,0)}
+  75%{clip:rect(74px,9999px,66px,0)}
+  80%{clip:rect(100px,9999px,4px,0)}
+  85%{clip:rect(92px,9999px,31px,0)}
+  90%{clip:rect(93px,9999px,98px,0)}
+  95%{clip:rect(23px,9999px,77px,0)}
+  100%{clip:rect(92px,9999px,8px,0)}
+}
+
+/* Main
+----------------------------------------------- */
+
+main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  height: auto;
+  width: auto;
+}
+
+
+/* Nav : Menu
+----------------------------------------------- */
+
+select {
+  margin: 0;
+  padding: 0 0.75em 0 0;
+  width: auto;
+  border: none;
+  background: none;
+  outline: none;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  font-family: 'Roboto Mono', monospace;
+
+}
+
+select:focus {
+  outline: none;
+  border: none;
+}
+
+.menu {
+  position: fixed;
+  width: auto;
+  right: .5em;
+  top: 1.25em;
+  z-index: 4;
+}
+
+.menu::after {
+  font-family: fontello;
+  content: "\f107"; /* fa-angle-down */
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  pointer-events: none;
+}
+
+@keyframes blinker {
+  36% { opacity: .16; }
+}
+
+
+/* timeline : Index
+----------------------------------------------- */
+
+.timeline {
+  margin: 0 5em 2em 5em;
+}
+
+.timeline table {
+  width: 100%;
+}
+
+
+table tr td {
+  padding-bottom: 1em; /* 1.0em */
+  padding-top: 1em;
+}
+
+table .trWhen {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 16px;
+  width: 5%;
+  padding-left: 2em;
+  padding-right: 2em;
+  text-align: right;
+  border-left: 1px solid #eee;
+}
+
+table .trWhat {
+  width: 75%;
+  min-width: 8.5em;
+  font-weight: 700;
+}
+
+table .trWhere {
+  width: 10%;
+  padding-left: 2em;
+  padding-right: 2em;
+  white-space: nowrap;
+  min-width: 1em;
+  xbackground-color: cyan;
+}
+
+tr {
+  border-top: 1px solid #fff;
+}
+
+tr:hover {
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+
+/* Effects : Loader
+----------------------------------------------- */
+
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.pace-inactive {
+  display: none;
+}
+
+.pace .pace-progress {
+  background: #141414;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 0.125em;
+}
+
+/* Effects : Scrollbar
+----------------------------------------------- */
+html {
+  overflow-y: scroll; /* force scroll to remove the right-margin jump */
+}
+
+::-webkit-scrollbar {
+  width: 0.5em; /* for vertical scrollbars */
+  height: 0.5em; /* for horizontal scrollbars */
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #141414;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #141414;
+}
+
+/* Effects : Fade In Page
+----------------------------------------------- */
+main {
+-webkit-animation: fadein .5s;
+   -moz-animation: fadein .5s;
+  -ms-animation: fadein .5s;
+   -o-animation: fadein .5s;
+  animation: fadein .5s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to 	 { opacity: 1; }
+}
+
+@-o-keyframes fadein {
+  from { opacity: 0; }
+  to 	 { opacity: 1; }
+}
+
+/* Effects - Cascade In Elements (and remove page flicker)
+----------------------------------------------- */
+table {
+  opacity: 1;
+}
+
+/* Effects - Responsive Easing
+----------------------------------------------- */
+
+body {
+  transition: all .4s cubic-bezier(0.86, 0, 0.07, 1);
+  -o-transition: all .4s cubic-bezier(0.86, 0, 0.07, 1);
+  -moz-transition: all .4s cubic-bezier(0.86, 0, 0.07, 1);
+  -webkit-transition: all .4s cubic-bezier(0.86, 0, 0.07, 1);
+  color: #141414;
+  background: #f8f8f8;
+  background: #fff;
+}
+
+select {
+  color: #141414;
+}
+
+a:link, a:visited, a:hover, a:active {
+  color: #141414;
+}
+
+.pace .pace-progress {
+  background: #141414;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #141414;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #141414;
+}
+
+
+/* Responsive : Upper Limit
+----------------------------------------------- */
+/* Responsive : iPhone X browser overflow-x fix */
+html, body { max-width: 100vw !important; overflow-x: hidden !important; }
+
+/* Padding instead of margin to prevent inner scrollers on mobile */
+.timeline { padding: 0 5em 0 5em; }
+.timeline { margin: 0em; }
+
+/* Responsive : Upper Limit
+----------------------------------------------- */
+@media screen and (max-width: 375px) and (orientation: portrait),
+screen and (max-width : 1024px) and (orientation: landscape)
+{
+  body, select, table .trWhen {
+  	font-size: 12px;
+  }
+  .trWhere {
+    display: none;
+  }
+
+  #name {
+    display: none;
+  } 
+}
+
+/* Responsive : iPad
+----------------------------------------------- */
+
+@media screen and (max-width : 1024px) and (orientation: landscape)
+{
+  .trWhere {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) and (orientation: portrait)
+{
+  body, select, table .trWhen {
+    font-size: 12px;
+  }
+
+  .trWhat div {
+    display: none;
+  }
+}
+
+/* Responsive : iPad Pro 10.5 Split
+----------------------------------------------- */
+
+@media screen and (max-width : 504px) and (orientation: portrait)
+{
+  body, select, table .trWhen {
+    font-size: 12px;
+  }
+
+  .trWhat div {
+    display: none;
+  }
+}
+
+
+/* Responsive : Mobile L
+----------------------------------------------- */
+
+@media screen and (max-width : 425px) and (orientation: portrait)
+{
+  body, select {
+    font-size: 12px;
+  }
+
+  .trWhen {
+    display: none;
+  }
+  .trWhat div {
+    display: none;
+  }
+
+  #name {
+    display: none;
+  }
+}
+
+
+/* Responsive : iPhone 6 Plus
+----------------------------------------------- */
+
+
+@media screen and (max-width : 736px) and (orientation: landscape)
+{
+  .trWhere {
+    display: block;
+  }
+}
+@media screen and (max-width : 414px) and (orientation: portrait)
+{
+  body, select {
+    font-size: 12px;
+  }
+
+  .trWhen {
+    display: none;
+  }
+  .trWhat div {
+    display: none;
+  }
+  .timeline {
+    padding-left: 4.5em;
+  }
+
+  #name {
+    display: none;
+  }
+}
+
+/* Responsive : iPhone 6
+----------------------------------------------- */
+
+
+@media screen and (max-width : 667px) and (orientation: landscape)
+{
+  .trWhen {
+    display: block;
+  }
+  .trWhere {
+    display: block;
+  }
+}
+@media screen and (max-width : 375px) and (orientation: portrait)
+{
+  body, select {
+    font-size: 12px;
+  }
+
+  .trWhat div, .trWhen {
+    display: none;
+  }
+  .trWhere {
+    display: none;
+  }
+  .trWhat {
+    padding-right: 1em;
+  }
+
+  #name {
+    display: none;
+  }
+  /* iPhone X browser overflow-x fix */
+  main {
+    max-width: 375px; /* match media query width */
+  }
+  
+}
+
+/* Responsive : iPhone SE
+----------------------------------------------- */
+
+
+@media screen and (max-width : 320px) and (orientation: portrait)
+{
+  body, select, table .trWhen {
+    font-size: 12px;
+  }
+
+  .trWhat div, .trWhere {
+    display: none;
+  }
+  .trWhat {
+    padding-right: 0.5em;
+  }
+  /* iPhone X browser overflow-x fix */
+  #name {
+    display: none;
+  }
+  .timeline {
+    xmargin-left: 1.25em;
+    padding-left: 1.25em;
+  }
+  main {
+    max-width: 320px; /* match media query width */
+  }
+
+}
+
+
+a:focus, a:hover, tr:hover, tr:hover a, select:hover, select:focus, .lbClose:hover, tr:hover > .trWhat div {
+  /* x-webkit-animation: blink .1s 3;
+  xanimation: blink .1s 3;
+  x-webkit-animation: flash linear .75s infinite;
+  xanimation: flash linear .75s infinite; */
+  -webkit-animation: breath ease-in-out 1.5s infinite;
+  -moz-animation:    breath ease-in-out 1.5s infinite;
+  -o-animation:      breath ease-in-out 1.5s infinite;
+  animation:         breath ease-in-out 1.5s infinite;
+}
+
+@-webkit-keyframes breath {
+  0% { opacity: 1; }
+  50% { opacity: .57; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes breath {
+  0% { opacity: 1; }
+  50% { opacity: .57; }
+  100% { opacity: 1; }
+}
+
+@-o-keyframes {
+  0% { opacity: 1; }
+  50% { opacity: .57; }
+  100% { opacity: 1; }
+}
+
+@keyframes breath {
+  0% { opacity: 1; }
+  50% { opacity: .57; }
+  100% { opacity: 1; }
+}

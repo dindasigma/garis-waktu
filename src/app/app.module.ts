@@ -5,6 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EventListComponent } from './event-list/event-list.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { GoogleSheetsDbService } from 'ng-google-sheets-db';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -12,9 +15,10 @@ import { EventListComponent } from './event-list/event-list.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [GoogleSheetsDbService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -46,6 +46,9 @@ screen and (max-width : 1024px) and (orientation: landscape)
   body, select, table .trWhen {
     font-size: 12px;
   }
+  #name {
+    display: none;
+  }
 }
 
 /* Responsive : iPad Pro 10.5 Split
@@ -55,6 +58,9 @@ screen and (max-width : 1024px) and (orientation: landscape)
 {
   body, select, table .trWhen {
     font-size: 12px;
+  }
+  #name {
+    display: none;
   }
 }
 

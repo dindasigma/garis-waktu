@@ -368,43 +368,6 @@ table tr td {
   padding-top: 1em;
 }
 
-table .trWhen {
-  font-family: 'Roboto Mono', monospace;
-  font-size:90%;
-  width: 10%;
-  padding-left: 2em;
-  padding-right: 2em;
-  text-align: right;
-  border-left: 1px solid #eee;
-}
-
-table .trWhat {
-  width: 70%;
-  min-width: 8.5em;
-  font-weight: 700;
-}
-
-table .trWhat .when-small {
-  font-family: 'Roboto Mono', monospace;
-  font-size:90%;
-  font-weight: 300;
-  display: none;
-}
-
-table .trWhat .where-small {
-  font-weight: 400;
-  font-style: italic;
-  display: none;
-}
-
-table .trWhere {
-  width: 10%;
-  padding-left: 2em;
-  padding-right: 2em;
-  white-space: nowrap;
-  min-width: 1em;
-}
-
 tr {
   border-top: 1px solid #fff;
 }
@@ -414,6 +377,42 @@ tr:hover {
   border-bottom: 1px solid #eee;
 }
 
+.trWhen {
+  font-family: 'Roboto Mono', monospace;
+  font-size:90%;
+  width: 10%;
+  padding-left: 2em;
+  padding-right: 2em;
+  text-align: right;
+  border-left: 1px solid #eee;
+}
+
+.trWhat {
+  width: 70%;
+  min-width: 8.5em;
+  font-weight: 700;
+}
+
+.trWhat .when-small {
+  font-family: 'Roboto Mono', monospace;
+  font-size:90%;
+  font-weight: 300;
+  display: none;
+}
+
+.trWhat .where-small {
+  font-weight: 400;
+  font-style: italic;
+  display: none;
+}
+
+.trWhere {
+  width: 10%;
+  padding-left: 2em;
+  padding-right: 2em;
+  white-space: nowrap;
+  min-width: 1em;
+}
 
 /* Effects : Loader
 ----------------------------------------------- */

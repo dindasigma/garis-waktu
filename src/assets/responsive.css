@@ -1,0 +1,192 @@
+/* Responsive : Upper Limit
+----------------------------------------------- */
+/* Responsive : iPhone X browser overflow-x fix */
+html, body { max-width: 100vw !important; overflow-x: hidden !important; }
+
+/* Padding instead of margin to prevent inner scrollers on mobile */
+.timeline { padding: 0 5em 0 5em; }
+.timeline { margin: 0em; }
+
+/* Responsive : Upper Limit
+----------------------------------------------- */
+@media screen and (max-width: 375px) and (orientation: portrait),
+screen and (max-width : 1024px) and (orientation: landscape)
+{
+  body, select, table .trWhen {
+  	font-size: 12px;
+  }
+  .trWhere {
+    display: none;
+  }
+
+  .trWhat .where-small {
+    display: block;
+  }
+
+  #name {
+    display: none;
+  } 
+}
+
+/* Responsive : iPad
+----------------------------------------------- */
+
+@media screen and (max-width : 1024px) and (orientation: landscape)
+{
+  .trWhere {
+    display: block;
+  }
+  .trWhat .where-small {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) and (orientation: portrait)
+{
+  body, select, table .trWhen {
+    font-size: 12px;
+  }
+}
+
+/* Responsive : iPad Pro 10.5 Split
+----------------------------------------------- */
+
+@media screen and (max-width : 504px) and (orientation: portrait)
+{
+  body, select, table .trWhen {
+    font-size: 12px;
+  }
+}
+
+
+/* Responsive : Mobile L
+----------------------------------------------- */
+
+@media screen and (max-width : 425px) and (orientation: portrait)
+{
+  body, select {
+    font-size: 12px;
+  }
+
+  .trWhen {
+    display: none;
+  }
+  .trWhat .when-small {
+    display: block;
+  }
+
+  #name {
+    display: none;
+  }
+}
+
+
+/* Responsive : iPhone 6 Plus
+----------------------------------------------- */
+
+
+@media screen and (max-width : 736px) and (orientation: landscape)
+{
+  .trWhere {
+    display: block;
+  }
+
+  .trWhat .where-small {
+    display: none;
+  }
+}
+@media screen and (max-width : 414px) and (orientation: portrait)
+{
+  body, select {
+    font-size: 12px;
+  }
+
+  .trWhen {
+    display: none;
+  }
+  .trWhat .when-small {
+    display: block;
+  }
+  .timeline {
+    padding-left: 4.5em;
+  }
+
+  #name {
+    display: none;
+  }
+}
+
+/* Responsive : iPhone 6
+----------------------------------------------- */
+
+
+@media screen and (max-width : 667px) and (orientation: landscape)
+{
+  .trWhen, .trWhere {
+    display: block;
+  }
+  
+  .trWhat .where-small, .trWhat .when-small {
+    display: none;
+  }
+}
+@media screen and (max-width : 375px) and (orientation: portrait)
+{
+  body, select {
+    font-size: 12px;
+  }
+
+  .trWhen, .trWhere {
+    display: none;
+  }
+  
+  .trWhat .where-small, .trWhat .when-small {
+    display: block;
+  }
+
+  .trWhat {
+    padding-right: 1em;
+  }
+
+  #name {
+    display: none;
+  }
+  /* iPhone X browser overflow-x fix */
+  main {
+    max-width: 375px; /* match media query width */
+  } 
+}
+
+/* Responsive : iPhone SE
+----------------------------------------------- */
+
+
+@media screen and (max-width : 320px) and (orientation: portrait)
+{
+  body, select, table .trWhen {
+    font-size: 12px;
+  }
+
+  .trWhere {
+    display: none;
+  }
+  .trWhat .where-small {
+    display: block;
+  }
+  .trWhat {
+    padding-right: 0.5em;
+  }
+
+  
+  /* iPhone X browser overflow-x fix */
+  #name {
+    display: none;
+  }
+  .timeline {
+    xmargin-left: 1.25em;
+    padding-left: 1.25em;
+  }
+  main {
+    max-width: 320px; /* match media query width */
+  }
+}

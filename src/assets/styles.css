@@ -4,11 +4,11 @@
 
 @font-face {
   font-family: 'fontello';
-  src: url('fonts/fontello.eot?88423925');
-  src: url('fonts/fontello.eot?88423925#iefix') format('embedded-opentype'),
-  url('fonts/fontello.woff?88423925') format('woff'),
-  url('fonts/fontello.ttf?88423925') format('truetype'),
-  url('fonts/fontello.svg?88423925#fontello') format('svg');
+  src: url('fonts/fontello.eot');
+  src: url('fonts/fontello.eot') format('embedded-opentype'),
+  url('fonts/fontello.woff') format('woff'),
+  url('fonts/fontello.ttf') format('truetype'),
+  url('fonts/fontello.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -208,34 +208,33 @@ code {
   position: relative;
   line-height: 1;
   width: 12.5rem;
-  font-family: 'Dancing Script', cursive;
-  font-style: italic;
-
 }
 
 .glitch:before {
-    content: attr(data-text);
-    position: absolute;
-    left: 2px;
-    text-shadow: 1px 0 #4e73df;
-    top: 0;
-    color: #000;
-    background: #fff;
-    overflow: hidden;
-    clip: rect(0,900px,0,0);
-    animation: noise-anim-2 3s infinite linear alternate-reverse;
+  font-family: fontello;
+  content: "\e80a";
+  position: absolute;
+  left: 1px;
+  text-shadow: 1px 0 #4e73df;
+  top: 0;
+  color: #000;
+  background: #fff;
+  overflow: hidden;
+  clip: rect(0,900px,0,0);
+  animation: noise-anim-2 3s infinite linear alternate-reverse;
 }
 .glitch:after {
-    content: attr(data-text);
-    position: absolute;
-    left: 2px;
-    text-shadow: -1px 0 #e74a3b;
-    top: 0;
-    color: #000;
-    background: #fff;
-    overflow: hidden;
-    clip: rect(0,900px,0,0);
-    animation: noise-anim 2s infinite linear alternate-reverse;
+  font-family: fontello;
+  content: "\e80a";
+  position: absolute;
+  left: 1px;
+  text-shadow: -1px 0 #e74a3b;
+  top: 0;
+  color: #000;
+  background: #fff;
+  overflow: hidden;
+  clip: rect(0,900px,0,0);
+  animation: noise-anim 2s infinite linear alternate-reverse;
 }
 
 @-webkit-keyframes noise-anim{
@@ -340,9 +339,8 @@ select:focus {
 
 .menu::after {
   font-family: fontello;
-  content: "\f107"; /* fa-angle-down */
+  content: "\e808"; /* fa-angle-down */
   position: absolute;
-  top: 0;
   right: 0;
   z-index: 3;
   pointer-events: none;
@@ -372,7 +370,7 @@ table tr td {
 
 table .trWhen {
   font-family: 'Roboto Mono', monospace;
-  font-size: 16px;
+  font-size:90%;
   width: 5%;
   padding-left: 2em;
   padding-right: 2em;
@@ -384,6 +382,19 @@ table .trWhat {
   width: 75%;
   min-width: 8.5em;
   font-weight: 700;
+}
+
+table .trWhat .when-small {
+  font-family: 'Roboto Mono', monospace;
+  font-size:90%;
+  font-weight: 300;
+  display: none;
+}
+
+table .trWhat .where-small {
+  font-weight: 400;
+  font-style: italic;
+  display: none;
 }
 
 table .trWhere {
@@ -523,196 +534,10 @@ a:link, a:visited, a:hover, a:active {
 }
 
 
-/* Responsive : Upper Limit
------------------------------------------------ */
-/* Responsive : iPhone X browser overflow-x fix */
-html, body { max-width: 100vw !important; overflow-x: hidden !important; }
 
-/* Padding instead of margin to prevent inner scrollers on mobile */
-.timeline { padding: 0 5em 0 5em; }
-.timeline { margin: 0em; }
-
-/* Responsive : Upper Limit
------------------------------------------------ */
-@media screen and (max-width: 375px) and (orientation: portrait),
-screen and (max-width : 1024px) and (orientation: landscape)
-{
-  body, select, table .trWhen {
-  	font-size: 12px;
-  }
-  .trWhere {
-    display: none;
-  }
-
-  #name {
-    display: none;
-  } 
-}
-
-/* Responsive : iPad
------------------------------------------------ */
-
-@media screen and (max-width : 1024px) and (orientation: landscape)
-{
-  .trWhere {
-    display: block;
-  }
-}
-
-@media screen and (max-width: 768px) and (orientation: portrait)
-{
-  body, select, table .trWhen {
-    font-size: 12px;
-  }
-
-  .trWhat div {
-    display: none;
-  }
-}
-
-/* Responsive : iPad Pro 10.5 Split
------------------------------------------------ */
-
-@media screen and (max-width : 504px) and (orientation: portrait)
-{
-  body, select, table .trWhen {
-    font-size: 12px;
-  }
-
-  .trWhat div {
-    display: none;
-  }
-}
-
-
-/* Responsive : Mobile L
------------------------------------------------ */
-
-@media screen and (max-width : 425px) and (orientation: portrait)
-{
-  body, select {
-    font-size: 12px;
-  }
-
-  .trWhen {
-    display: none;
-  }
-  .trWhat div {
-    display: none;
-  }
-
-  #name {
-    display: none;
-  }
-}
-
-
-/* Responsive : iPhone 6 Plus
------------------------------------------------ */
-
-
-@media screen and (max-width : 736px) and (orientation: landscape)
-{
-  .trWhere {
-    display: block;
-  }
-}
-@media screen and (max-width : 414px) and (orientation: portrait)
-{
-  body, select {
-    font-size: 12px;
-  }
-
-  .trWhen {
-    display: none;
-  }
-  .trWhat div {
-    display: none;
-  }
-  .timeline {
-    padding-left: 4.5em;
-  }
-
-  #name {
-    display: none;
-  }
-}
-
-/* Responsive : iPhone 6
------------------------------------------------ */
-
-
-@media screen and (max-width : 667px) and (orientation: landscape)
-{
-  .trWhen {
-    display: block;
-  }
-  .trWhere {
-    display: block;
-  }
-}
-@media screen and (max-width : 375px) and (orientation: portrait)
-{
-  body, select {
-    font-size: 12px;
-  }
-
-  .trWhat div, .trWhen {
-    display: none;
-  }
-  .trWhere {
-    display: none;
-  }
-  .trWhat {
-    padding-right: 1em;
-  }
-
-  #name {
-    display: none;
-  }
-  /* iPhone X browser overflow-x fix */
-  main {
-    max-width: 375px; /* match media query width */
-  }
-  
-}
-
-/* Responsive : iPhone SE
------------------------------------------------ */
-
-
-@media screen and (max-width : 320px) and (orientation: portrait)
-{
-  body, select, table .trWhen {
-    font-size: 12px;
-  }
-
-  .trWhat div, .trWhere {
-    display: none;
-  }
-  .trWhat {
-    padding-right: 0.5em;
-  }
-  /* iPhone X browser overflow-x fix */
-  #name {
-    display: none;
-  }
-  .timeline {
-    xmargin-left: 1.25em;
-    padding-left: 1.25em;
-  }
-  main {
-    max-width: 320px; /* match media query width */
-  }
-
-}
 
 
 a:focus, a:hover, tr:hover, tr:hover a, select:hover, select:focus, .lbClose:hover, tr:hover > .trWhat div {
-  /* x-webkit-animation: blink .1s 3;
-  xanimation: blink .1s 3;
-  x-webkit-animation: flash linear .75s infinite;
-  xanimation: flash linear .75s infinite; */
   -webkit-animation: breath ease-in-out 1.5s infinite;
   -moz-animation:    breath ease-in-out 1.5s infinite;
   -o-animation:      breath ease-in-out 1.5s infinite;
@@ -742,3 +567,37 @@ a:focus, a:hover, tr:hover, tr:hover a, select:hover, select:focus, .lbClose:hov
   50% { opacity: .57; }
   100% { opacity: 1; }
 }
+
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-globe:before { content: '\e80a'; } /* '' */

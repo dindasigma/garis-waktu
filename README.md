@@ -4,7 +4,7 @@ Program ini secara umum bertujuan untuk memberi tahu kembali tentang masa lalu y
 
 Kontennya saya garap sendiri berdasarkan buku-buku yang saya baca. Bagi saya pribadi, program ini bermanfaat untuk membantu saya mengetahui posisi waktu suatu kejadian dalam sejarah.
 
-[waktu.dinda.id](https://waktu.dinda.id/)
+[timeline.dinda.id](https://timeline.dinda.id/)
 
 ## Development server
 

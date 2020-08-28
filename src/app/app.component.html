@@ -13,7 +13,7 @@
   </div>
   <nav>
     <div class="menu">
-      <select dir="rtl">
+      <select dir="rtl" #mySelect (change)='getEvents(mySelect.value)'>
         <option value="all" selected="selected">All</option>
         <option value="politic">Politic</option>
         <option value="science">Science</option>
@@ -24,7 +24,18 @@
   </nav>
 
   <main>
-    <app-event-list></app-event-list>
+    <div class="timeline" *ngIf="events$ | async as events; else loading">
+      <app-event-list [events]="events"></app-event-list>
+    </div>
   </main>
-
 </div>
+
+<ng-template #loading>
+  <div class="loading">
+    <div class="ball-pulse">
+      <div class="loader">
+        <div class="ball"></div>
+      </div>
+    </div>
+  </div>
+</ng-template>

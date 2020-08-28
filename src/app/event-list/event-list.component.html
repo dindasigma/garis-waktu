@@ -1,37 +1,26 @@
-<div class="timeline" *ngIf="events$ | async as events; else loading">
-  <table>
-    <tbody>
-      <tr>
-        <td class="trWhen"></td>
-        <td class="trWhat"></td>
-        <td class="trWhere"></td>
-      </tr>
+<table>
+  <tbody>
+    <tr>
+      <td class="trWhen"></td>
+      <td class="trWhat"></td>
+      <td class="trWhere"></td>
+    </tr>
 
-      <tr *ngFor="let event of events">
-        <td class="trWhen">{{ event.when }}</td>
-        <td class="trWhat">
-          <div class="when-small">{{ event.when }}</div>
-          <div class="what" [innerHTML]="event.what"></div>
-          <div class="where-small">{{ event.where }}</div>
-        </td>
-        <td class="trWhere">{{ event.where }}
-        </td>
-      </tr>
+    <tr *ngFor="let event of events">
+      <td class="trWhen">{{ event.when }}</td>
+      <td class="trWhat">
+        <div class="when-small">{{ event.when }}</div>
+        <div class="what" [innerHTML]="event.what"></div>
+        <div class="where-small">{{ event.where }}</div>
+      </td>
+      <td class="trWhere">{{ event.where }}
+      </td>
+    </tr>
 
-      <tr>
-        <td class="trWhen"></td>
-        <td class="trWhat"></td>
-        <td class="trWhere"></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-<ng-template #loading>
-  <div class="loading">
-    <div class="lds-ripple">
-      <div></div>
-      <div></div>
-    </div>
-  </div>
-</ng-template>
+    <tr>
+      <td class="trWhen"></td>
+      <td class="trWhat"></td>
+      <td class="trWhere"></td>
+    </tr>
+  </tbody>
+</table>

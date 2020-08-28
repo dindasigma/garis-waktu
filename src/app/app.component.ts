@@ -10,19 +10,18 @@ import { Event, eventAttributesMapping } from './event-list/event-list.model';
   templateUrl: './app.component.html',
 })
 export class AppComponent {
-  events$: Observable<Event[]>;
+  events: Event[];
+
 
   constructor(private googleSheetsDbService: GoogleSheetsDbService) {
-    this.getEvents('all')
+    this.getEvents('')
   }
 
   getEvents(which: string) {
-    if (which == 'all') {
-      this.events$ = this.googleSheetsDbService.get<Event>(
-        environment.spreadsheetId, environment.worksheetId, eventAttributesMapping);
-    } else {
-      this.events$ = this.googleSheetsDbService.getActive<Event>(
-        environment.spreadsheetId, environment.worksheetId, eventAttributesMapping, which);
-    }
+    this.googleSheetsDbService.get(
+      environment.spreadsheetId, environment.worksheetId, eventAttributesMapping)
+      .subscribe((event: Event[]) => {
+        this.events = event.filter(e => e.which.includes(which))
+      });
   }
 }

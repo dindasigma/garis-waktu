@@ -13,18 +13,18 @@
   </div>
   <nav>
     <div class="menu">
-      <select dir="rtl" #mySelect (change)='getEvents(mySelect.value)'>
-        <option value="all" selected="selected">All</option>
-        <option value="politic">Politic</option>
-        <option value="science">Science</option>
-        <option value="religion">Religion</option>
+      <select dir="rtl" #categories (change)='getEvents(categories.value)'>
+        <option value="" selected="selected">All</option>
+        <option value="Politic">Politic</option>
+        <option value="Science">Science</option>
+        <option value="Religion">Religion</option>
         <option value="Technology">Technology</option>
       </select>
     </div>
   </nav>
 
   <main>
-    <div class="timeline" *ngIf="events$ | async as events; else loading">
+    <div class="timeline" *ngIf="events; else loading">
       <app-event-list [events]="events"></app-event-list>
     </div>
   </main>

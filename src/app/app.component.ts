@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+
 import { Component } from '@angular/core';
 
 @Component({
@@ -5,5 +7,7 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
 })
 export class AppComponent {
+  constructor(public router: Router) {
 
+  }
 }

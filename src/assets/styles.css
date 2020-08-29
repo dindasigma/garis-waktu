@@ -201,9 +201,13 @@ code {
   background: none;
 }
 
+#name i.back {
+  font-size: 30px;
+}
+
 .glitch {
-  color: #000;
   font-size: 50px;
+  color: #000;
   position: relative;
   line-height: 1;
   width: 12.5rem;
@@ -374,7 +378,6 @@ tr {
 tr:hover {
   border-top: 1px solid #eee;
   border-bottom: 1px solid #eee;
-  cursor: pointer;
 }
 
 .trWhen {
@@ -599,3 +602,4 @@ a:focus, a:hover, tr:hover, tr:hover a, select:hover, select:focus, .lbClose:hov
 }
  
 .icon-globe:before { content: '\e80a'; } /* '' */
+.icon-menu:before { content: '\f008'; } /* '' */

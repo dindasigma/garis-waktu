@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { environment } from '../environments/environment';
 import { GoogleSheetsDbService } from 'ng-google-sheets-db';
-import { Event, eventAttributesMapping } from './event-list/event-list.model';
+import { Event, eventAttributesMapping } from './app.model';
 
 @Injectable()
 export class AppService {
@@ -21,4 +21,8 @@ export class AppService {
             .filter(e => e.which.includes(which))
     }
 
+    getEvent(url: string): Event {
+        return this.events
+            .find(e => e.url == url)
+    }
 }

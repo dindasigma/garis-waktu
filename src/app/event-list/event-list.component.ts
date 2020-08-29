@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Event } from './event-list.model';
+import { Event } from '../app.model';
 
 import { AppService } from '../app.service'
 

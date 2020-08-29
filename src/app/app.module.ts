@@ -9,12 +9,14 @@ import { EventListComponent } from './event-list/event-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GoogleSheetsDbService } from 'ng-google-sheets-db';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { EventDetailComponent } from './event-detail/event-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EventListComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    EventDetailComponent
   ],
   imports: [
     BrowserModule,

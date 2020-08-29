@@ -1,0 +1,7 @@
+<div class="timeline" *ngIf="event; else loading">
+    <p>{{ event.details }}</p>
+</div>
+
+<ng-template #loading>
+    <app-not-found></app-not-found>
+</ng-template>

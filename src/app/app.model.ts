@@ -3,6 +3,8 @@ export const eventAttributesMapping = {
     where: 'Where',
     what: 'What',
     which: 'Which',
+    url: 'URL',
+    details: 'Details',
 };
 
 export interface Event {
@@ -10,4 +12,6 @@ export interface Event {
     where: string;
     what: string;
     which: string;
+    url: string;
+    details: string;
 }

@@ -384,12 +384,12 @@ tr:hover {
   padding-left: 2em;
   padding-right: 2em;
   text-align: right;
-  border-left: 1px solid #eee;
+  min-width: 4em;
 }
 
 .trWhat {
-  width: 70%;
-  min-width: 8.5em;
+  width: 80%;
+  min-width: 9em;
   font-weight: 700;
 }
 
@@ -411,7 +411,6 @@ tr:hover {
   padding-left: 2em;
   padding-right: 2em;
   white-space: nowrap;
-  min-width: 1em;
 }
 
 /* Effects : Loader
@@ -473,10 +472,11 @@ html {
 /* Effects : Fade In Page
 ----------------------------------------------- */
 .events {
--webkit-animation: fadein 1s;
-   -moz-animation: fadein 1s;
+  border-left: 1px solid #eee;
+  -webkit-animation: fadein 1s;
+  -moz-animation: fadein 1s;
   -ms-animation: fadein 1s;
-   -o-animation: fadein 1s;
+  -o-animation: fadein 1s;
   animation: fadein 1s;
 }
 
@@ -520,10 +520,6 @@ select {
 
 a:link, a:visited, a:hover, a:active {
   color: #141414;
-}
-
-.pace .pace-progress {
-  background: #141414;
 }
 
 ::-webkit-scrollbar-track {

@@ -114,7 +114,7 @@ screen and (max-width : 1024px) and (orientation: landscape)
     display: block;
   }
   .timeline {
-    padding-left: 4.5em;
+    padding-left: 1em;
   }
 
   #name {

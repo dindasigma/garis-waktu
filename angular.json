@@ -123,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "waktu"
+  "defaultProject": "waktu",
+  "cli": {
+    "analytics": "8cfe642d-d2b0-4c2a-b440-02fb7c467ede"
+  }
 }

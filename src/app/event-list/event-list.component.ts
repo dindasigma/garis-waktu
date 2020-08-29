@@ -1,7 +1,8 @@
-import { Observable } from 'rxjs';
-
 import { Component, OnInit, Input } from '@angular/core';
 import { Event } from './event-list.model';
+
+import { AppService } from '../app.service'
+
 
 @Component({
   selector: 'app-event-list',
@@ -9,7 +10,19 @@ import { Event } from './event-list.model';
 })
 
 export class EventListComponent implements OnInit {
-  @Input() events: Observable<Event[]>;
+  public selectedCategory = '';
+
+  constructor(private appService: AppService) {
+  }
+
   ngOnInit() {
+  }
+
+  get events(): Event[] {
+    return this.appService.getEvents(this.selectedCategory)
+  }
+
+  changeCategory(newCategory?: string) {
+    this.selectedCategory = newCategory;
   }
 }

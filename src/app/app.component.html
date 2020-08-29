@@ -7,35 +7,8 @@
 <div class="pace-activity"></div>
 
 <div id="container">
-
   <div id="name">
     <div class="glitch"><a href="https://dinda.id" target="_blank"><i class="icon-globe"></i></a></div>
   </div>
-  <nav>
-    <div class="menu">
-      <select dir="rtl" #categories (change)='getEvents(categories.value)'>
-        <option value="" selected="selected">All</option>
-        <option value="Politic">Politic</option>
-        <option value="Science">Science</option>
-        <option value="Religion">Religion</option>
-        <option value="Technology">Technology</option>
-      </select>
-    </div>
-  </nav>
-
-  <main>
-    <div class="timeline" *ngIf="events; else loading">
-      <app-event-list [events]="events"></app-event-list>
-    </div>
-  </main>
+  <router-outlet></router-outlet>
 </div>
-
-<ng-template #loading>
-  <div class="loading">
-    <div class="ball-pulse">
-      <div class="loader">
-        <div class="ball"></div>
-      </div>
-    </div>
-  </div>
-</ng-template>

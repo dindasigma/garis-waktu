@@ -10,20 +10,18 @@ import { AppService } from '../app.service'
 })
 
 export class EventListComponent implements OnInit {
-  public selectedCategory = '';
+  selectedCategory = 'All';
 
   constructor(private appService: AppService) {
   }
 
   ngOnInit() {
-
+    this.appService.selectedCategory.subscribe(
+      selectedCategory => this.selectedCategory = selectedCategory
+    )
   }
 
   get events(): Event[] {
     return this.appService.getEvents(this.selectedCategory)
-  }
-
-  changeCategory(newCategory?: string) {
-    this.selectedCategory = newCategory;
   }
 }

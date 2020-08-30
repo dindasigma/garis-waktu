@@ -31,9 +31,6 @@ screen and (max-width : 1024px) and (orientation: landscape)
     left: 40%;
   }
 
-  .timeline-inner {
-    border: none;
-  }
 }
 
 /* Responsive : iPad
@@ -57,9 +54,7 @@ screen and (max-width : 1024px) and (orientation: landscape)
   #name {
     display: none;
   }
-  .timeline-inner {
-    border: none;
-  }
+ 
   .not-found {
     left: 40%;
   }
@@ -76,9 +71,7 @@ screen and (max-width : 1024px) and (orientation: landscape)
   #name {
     display: none;
   }
-  .timeline-inner {
-    border: none;
-  }
+
   .not-found {
     left: 40%;
   }
@@ -138,12 +131,6 @@ screen and (max-width : 1024px) and (orientation: landscape)
   }
   .trWhat .when-small {
     display: block;
-  }
-  .timeline {
-    padding-left: 1em;
-  }
-  .timeline-inner {
-    border: none;
   }
 
   #name {

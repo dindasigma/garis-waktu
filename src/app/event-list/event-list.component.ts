@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Event } from '../app.model';
 
 import { AppService } from '../app.service'
@@ -16,6 +16,7 @@ export class EventListComponent implements OnInit {
   }
 
   ngOnInit() {
+
   }
 
   get events(): Event[] {

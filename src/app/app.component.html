@@ -19,25 +19,11 @@
     <a routerLink="/"><i class="icon-menu back"></i></a>
   </ng-template>
 
-  <nav *ngIf="router.url === '/';else backlink">
-    <div class="menu">
-      <select dir="rtl" #categories (change)='changeCategory(categories.value)'>
-        <option value="" selected="selected">All</option>
-        <option value="Politic">Politic</option>
-        <option value="Science">Science</option>
-        <option value="Religion">Religion</option>
-        <option value="Technology">Technology</option>
-      </select>
-    </div>
-  </nav>
-  <ng-template #backlink>
+  <nav *ngIf="router.url !== '/'">
     <div class="back-link">
       <a routerLink="/">Back</a>
     </div>
-  </ng-template>
+  </nav>
 
-
-  <main class="events">
-    <router-outlet></router-outlet>
-  </main>
+  <router-outlet></router-outlet>
 </div>

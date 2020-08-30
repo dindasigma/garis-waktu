@@ -101,9 +101,7 @@ em, i {
   font-style: normal;
   white-space: nowrap;
 }
-p {
-  margin-top: 1em;
-}
+
 
 code {
   font-family: "Lucida Console", Monaco, monospace;
@@ -184,6 +182,14 @@ code {
 /* Header : Name
 ----------------------------------------------- */
 
+
+.timeline-inner {
+    border-left: 1px solid #eee;
+    height: 100%;
+    position: fixed;
+    left: 90px;
+}
+
 #name {
   float: left;
 }
@@ -229,6 +235,47 @@ code {
 .glitch:after {
   font-family: fontello;
   content: "\e80a";
+  position: absolute;
+  left: 1px;
+  text-shadow: -1px 0 #e74a3b;
+  top: 0;
+  color: #000;
+  background: #fff;
+  overflow: hidden;
+  clip: rect(0,900px,0,0);
+  animation: noise-anim 2s infinite linear alternate-reverse;
+}
+
+.not-found {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+
+.glitch-404 {
+  font-size: 60px;
+  font-weight: 700;
+  color: #000;
+  position: relative;
+}
+
+.glitch-404:before {
+  font-family: fontello;
+  content: attr(data-text);
+  position: absolute;
+  left: 1px;
+  text-shadow: 1px 0 #4e73df;
+  top: 0;
+  color: #000;
+  background: #fff;
+  overflow: hidden;
+  clip: rect(0,900px,0,0);
+  animation: noise-anim-2 3s infinite linear alternate-reverse;
+}
+.glitch-404:after {
+  font-family: fontello;
+  content: attr(data-text);
   position: absolute;
   left: 1px;
   text-shadow: -1px 0 #e74a3b;
@@ -292,7 +339,6 @@ code {
 ----------------------------------------------- */
 
 main {
-  position: absolute;
   top: 0;
   left: 0;
   z-index: 3;
@@ -332,7 +378,8 @@ select:focus {
   border: none;
 }
 
-.menu {
+.menu, .back-link {
+  font-family: 'Roboto Mono', monospace;
   position: fixed;
   width: auto;
   right: .5em;
@@ -340,11 +387,29 @@ select:focus {
   z-index: 4;
 }
 
+.back-link {
+  padding-left: 15px;
+}
+
+.back-link a {
+  text-decoration: none;
+  background: none;
+}
+
 .menu::after {
   font-family: fontello;
   content: "\e808"; /* fa-angle-down */
   position: absolute;
   right: 0;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.back-link::after {
+  font-family: fontello;
+  content: "\e80b"; /* fa-angle-down */
+  position: absolute;
+  left: 0;
   z-index: 3;
   pointer-events: none;
 }
@@ -373,6 +438,7 @@ table tr td {
 
 tr {
   border-top: 1px solid #fff;
+  cursor: pointer;
 }
 
 tr:hover {
@@ -475,7 +541,6 @@ html {
 /* Effects : Fade In Page
 ----------------------------------------------- */
 .events {
-  border-left: 1px solid #eee;
   padding-right: 10px;
   -webkit-animation: fadein 1s;
   -moz-animation: fadein 1s;

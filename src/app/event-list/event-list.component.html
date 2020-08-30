@@ -1,45 +1,31 @@
-<nav>
-  <div class="menu">
-    <select dir="rtl" #categories (change)='changeCategory(categories.value)'>
-      <option value="" selected="selected">All</option>
-      <option value="Politic">Politic</option>
-      <option value="Science">Science</option>
-      <option value="Religion">Religion</option>
-      <option value="Technology">Technology</option>
-    </select>
-  </div>
-</nav>
+<div class="timeline" *ngIf="events; else loading">
+  <table>
+    <tbody>
+      <tr class="events">
+        <td class="trWhen"></td>
+        <td class="trWhat"></td>
+        <td class="trWhere"></td>
+      </tr>
 
-<main>
-  <div class="timeline" *ngIf="events; else loading">
-    <table>
-      <tbody>
-        <tr class="events">
-          <td class="trWhen"></td>
-          <td class="trWhat"></td>
-          <td class="trWhere"></td>
-        </tr>
+      <tr *ngFor="let event of events" class="events" routerLink="/detail/{{ event.url }}">
+        <td class="trWhen">{{ event.when }}</td>
+        <td class="trWhat">
+          <div class="when-small">{{ event.when }}</div>
+          <div class="what" [innerHTML]="event.what"></div>
+          <div class="where-small">{{ event.where }}</div>
+        </td>
+        <td class="trWhere">{{ event.where }}
+        </td>
+      </tr>
 
-        <tr *ngFor="let event of events" class="events" routerLink="/detail/{{ event.url }}">
-          <td class="trWhen">{{ event.when }}</td>
-          <td class="trWhat">
-            <div class="when-small">{{ event.when }}</div>
-            <div class="what" [innerHTML]="event.what"></div>
-            <div class="where-small">{{ event.where }}</div>
-          </td>
-          <td class="trWhere">{{ event.where }}
-          </td>
-        </tr>
-
-        <tr class="events">
-          <td class="trWhen"></td>
-          <td class="trWhat"></td>
-          <td class="trWhere"></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</main>
+      <tr class="events">
+        <td class="trWhen"></td>
+        <td class="trWhat"></td>
+        <td class="trWhere"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 <ng-template #loading>
   <div class="loading">

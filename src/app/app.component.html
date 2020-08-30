@@ -7,13 +7,37 @@
 <div class="pace-activity"></div>
 
 <div id="container">
-  <div id="name">
-    <div class="glitch" *ngIf="router.url === '/';else back"><a href="https://dinda.id" target="_blank"><i
-          class="icon-globe"></i></a></div>
+  <div class="timeline-inner">
+    <div id="name">
+      <div class="glitch" *ngIf="router.url === '/';else back">
+        <a href="https://dinda.id" target="_blank"><i class="icon-globe"></i></a>
+      </div>
+    </div>
   </div>
+  <div class="sidebar"></div>
   <ng-template #back>
     <a routerLink="/"><i class="icon-menu back"></i></a>
   </ng-template>
 
-  <router-outlet></router-outlet>
+  <nav *ngIf="router.url === '/';else backlink">
+    <div class="menu">
+      <select dir="rtl" #categories (change)='changeCategory(categories.value)'>
+        <option value="" selected="selected">All</option>
+        <option value="Politic">Politic</option>
+        <option value="Science">Science</option>
+        <option value="Religion">Religion</option>
+        <option value="Technology">Technology</option>
+      </select>
+    </div>
+  </nav>
+  <ng-template #backlink>
+    <div class="back-link">
+      <a routerLink="/">Back</a>
+    </div>
+  </ng-template>
+
+
+  <main class="events">
+    <router-outlet></router-outlet>
+  </main>
 </div>

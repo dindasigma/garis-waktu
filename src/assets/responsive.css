@@ -25,7 +25,11 @@ screen and (max-width : 1024px) and (orientation: landscape)
 
   #name {
     display: none;
-  } 
+  }
+
+  .timeline-inner {
+    border: none;
+  }
 }
 
 /* Responsive : iPad
@@ -49,6 +53,9 @@ screen and (max-width : 1024px) and (orientation: landscape)
   #name {
     display: none;
   }
+  .timeline-inner {
+    border: none;
+  }
 }
 
 /* Responsive : iPad Pro 10.5 Split
@@ -61,6 +68,9 @@ screen and (max-width : 1024px) and (orientation: landscape)
   }
   #name {
     display: none;
+  }
+  .timeline-inner {
+    border: none;
   }
 }
 
@@ -83,6 +93,9 @@ screen and (max-width : 1024px) and (orientation: landscape)
 
   #name {
     display: none;
+  }
+  .timeline-inner {
+    border: none;
   }
 }
 
@@ -115,6 +128,9 @@ screen and (max-width : 1024px) and (orientation: landscape)
   }
   .timeline {
     padding-left: 1em;
+  }
+  .timeline-inner {
+    border: none;
   }
 
   #name {
@@ -153,6 +169,9 @@ screen and (max-width : 1024px) and (orientation: landscape)
   .trWhat {
     padding-right: 1em;
   }
+  .timeline-inner {
+    border: none;
+  }
 
   #name {
     display: none;
@@ -187,6 +206,9 @@ screen and (max-width : 1024px) and (orientation: landscape)
   /* iPhone X browser overflow-x fix */
   #name {
     display: none;
+  }
+  .timeline-inner {
+    border: none;
   }
   .timeline {
     xmargin-left: 1.25em;

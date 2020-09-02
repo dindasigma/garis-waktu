@@ -1,14 +1,14 @@
 <div id="container">
-  <div class="timeline-inner">
-    <div id="name">
-      <div class="glitch" *ngIf="router.url === '/';else back">
-        <a href="https://dinda.id" target="_blank"><i class="icon-globe"></i></a>
-      </div>
+  <div id="name">
+    <div class="logo glitch" *ngIf="router.url === '/';else back">
+      <a href="https://dinda.id" target="_blank"><i class="icon-globe"></i></a>
     </div>
   </div>
 
   <ng-template #back>
-    <a routerLink="/"><i class="icon-menu back"></i></a>
+    <div class="logo">
+      <a routerLink="/"><i class="icon-menu back"></i></a>
+    </div>
   </ng-template>
 
   <nav *ngIf="router.url !== '/'; else menulink">
@@ -27,6 +27,10 @@
     </div>
   </ng-template>
   <main>
-    <router-outlet></router-outlet>
+    <div [@triggerName]="prepareRoute(outlet)">
+      <router-outlet #outlet="outlet"></router-outlet>
+    </div>
+
   </main>
+
 </div>

@@ -1,11 +1,3 @@
-/* Responsive : Upper Limit
------------------------------------------------ */
-/* Responsive : iPhone X browser overflow-x fix */
-html, body { max-width: 100vw !important; overflow-x: hidden !important; }
-
-/* Padding instead of margin to prevent inner scrollers on mobile */
-.timeline { padding: 0 5em 0 5em; }
-.timeline { margin: 0em; }
 
 /* Responsive : Upper Limit
 ----------------------------------------------- */
@@ -13,7 +5,7 @@ html, body { max-width: 100vw !important; overflow-x: hidden !important; }
 screen and (max-width : 1024px) and (orientation: landscape)
 {
   body, select, table .trWhen {
-  	font-size: 12px;
+  	font-size: 14px;
   }
   .trWhere {
     display: none;
@@ -24,7 +16,8 @@ screen and (max-width : 1024px) and (orientation: landscape)
   }
 
   #name {
-    display: none;
+      font-size: 25px;
+      padding: 0 10px;
   }
 
   .not-found {
@@ -49,10 +42,11 @@ screen and (max-width : 1024px) and (orientation: landscape)
 @media screen and (max-width: 768px) and (orientation: portrait)
 {
   body, select, table .trWhen {
-    font-size: 12px;
+    font-size: 14px;
   }
   #name {
-    display: none;
+    font-size: 25px;
+    padding: 0 10px;
   }
  
   .not-found {
@@ -66,10 +60,11 @@ screen and (max-width : 1024px) and (orientation: landscape)
 @media screen and (max-width : 504px) and (orientation: portrait)
 {
   body, select, table .trWhen {
-    font-size: 12px;
+    font-size: 14px;
   }
   #name {
-    display: none;
+    font-size: 25px;
+    padding: 0 10px;
   }
 
   .not-found {
@@ -84,7 +79,7 @@ screen and (max-width : 1024px) and (orientation: landscape)
 @media screen and (max-width : 425px) and (orientation: portrait)
 {
   body, select {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .trWhen {
@@ -95,11 +90,11 @@ screen and (max-width : 1024px) and (orientation: landscape)
   }
 
   #name {
-    display: none;
+    font-size: 25px;
+    padding: 0 10px;
+
   }
-  .timeline-inner {
-    border: none;
-  }
+
   .not-found {
     left: 40%;
   }
@@ -123,7 +118,7 @@ screen and (max-width : 1024px) and (orientation: landscape)
 @media screen and (max-width : 414px) and (orientation: portrait)
 {
   body, select {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .trWhen {
@@ -134,8 +129,10 @@ screen and (max-width : 1024px) and (orientation: landscape)
   }
 
   #name {
-    display: none;
-  }
+    font-size: 25px;
+    padding: 0 10px;
+
+   }
   .not-found {
     left: 40%;
   }
@@ -158,7 +155,7 @@ screen and (max-width : 1024px) and (orientation: landscape)
 @media screen and (max-width : 375px) and (orientation: portrait)
 {
   body, select {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .trWhen, .trWhere {
@@ -172,13 +169,12 @@ screen and (max-width : 1024px) and (orientation: landscape)
   .trWhat {
     padding-right: 1em;
   }
-  .timeline-inner {
-    border: none;
-  }
 
   #name {
-    display: none;
+    font-size: 25px;
+    padding: 0 10px;
   }
+  
   .not-found {
     left: 40%;
   }
@@ -195,7 +191,7 @@ screen and (max-width : 1024px) and (orientation: landscape)
 @media screen and (max-width : 320px) and (orientation: portrait)
 {
   body, select, table .trWhen {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .trWhere {
@@ -216,11 +212,9 @@ screen and (max-width : 1024px) and (orientation: landscape)
   #name {
     display: none;
   }
-  .timeline-inner {
-    border: none;
-  }
+
   .timeline {
-    xmargin-left: 1.25em;
+    margin-left: 1.25em;
     padding-left: 1.25em;
   }
   main {

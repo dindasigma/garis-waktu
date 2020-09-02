@@ -5,9 +5,21 @@ import { EventDetailComponent } from './event-detail/event-detail.component'
 import { NotFoundComponent } from './not-found/not-found.component'
 
 const routes: Routes = [
-  { path: '', component: EventListComponent },
-  { path: 'detail/:url', component: EventDetailComponent },
-  { path: '**', component: NotFoundComponent },
+  {
+    path: '',
+    component: EventListComponent,
+    data: { animationState: 'One' }
+  },
+  {
+    path: 'detail/:url',
+    component: EventDetailComponent,
+    data: { animationState: 'Two' }
+  },
+  {
+    path: '**',
+    component: NotFoundComponent
+
+  },
 ];
 
 @NgModule({

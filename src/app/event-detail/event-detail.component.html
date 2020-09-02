@@ -1,7 +1,17 @@
-<div class="timeline" *ngIf="event; else loading">
-    <p>{{ event.details }}</p>
+<div class="timeline details" *ngIf="event; else loading">
+    <div class="when">{{ event.when }}</div>
+    <h3>{{ event.what }}</h3>
+    <div class="where">{{ event.where }}</div>
+
+    <p [innerHTML]="event.details"></p>
 </div>
 
 <ng-template #loading>
-    <app-not-found></app-not-found>
+    <div class="loading">
+        <div class="ball-pulse">
+            <div class="loader">
+                <div class="ball"></div>
+            </div>
+        </div>
+    </div>
 </ng-template>

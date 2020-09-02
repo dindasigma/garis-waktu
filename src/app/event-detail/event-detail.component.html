@@ -1,6 +1,6 @@
 <div class="timeline details" *ngIf="event; else loading">
     <div class="when">{{ event.when }}</div>
-    <h3>{{ event.what }}</h3>
+    <h3 [innerHTML]="event.what"></h3>
     <div class="where">{{ event.where }}</div>
 
     <p [innerHTML]="event.details"></p>

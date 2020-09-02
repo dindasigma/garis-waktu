@@ -32,8 +32,8 @@ export const routeTransitionAnimations = trigger('triggerName', [
         query(':enter', [style({ left: '-100%', opacity: 0 })]),
         query(':leave', animateChild()),
         group([
-            query(':leave', [animate('.3s cubic-bezier(0.86, 0, 0.07, 1)', style({ left: '100%', opacity: 0 }))]),
-            query(':enter', [animate('.3s cubic-bezier(0.86, 0, 0.07, 1)', style({ left: '0%', opacity: 1 }))])
+            query(':leave', [animate('.4s cubic-bezier(0.86, 0, 0.07, 1)', style({ left: '100%', opacity: 0 }))]),
+            query(':enter', [animate('.4s cubic-bezier(0.86, 0, 0.07, 1)', style({ left: '0%', opacity: 1 }))])
         ]),
         query(':enter', animateChild())
     ])

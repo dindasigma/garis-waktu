@@ -462,6 +462,11 @@ tr:hover {
   font-size: 90%;
 } 
 
+.details h3 a {
+  text-decoration: none;
+  background: none;
+}
+
 /* Effects : Loader
 ----------------------------------------------- */
 

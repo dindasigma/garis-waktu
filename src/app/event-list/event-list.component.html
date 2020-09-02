@@ -1,4 +1,4 @@
-<div class="timeline" *ngIf="events; else loading">
+<div class="timeline" *ngIf="events?.length > 0; else loading">
   <table>
     <tbody>
       <tr class="events">

@@ -86,7 +86,7 @@ table {
   -webkit-touch-callout: none;
 }
 
-/* Fonts
+/* Fonts and icon
 -------------------------------------------------- */
 
 h1, h2, h3, h4, h5, h6 {
@@ -101,7 +101,6 @@ em, i {
   font-style: normal;
   white-space: nowrap;
 }
-
 
 code {
   font-family: "Lucida Console", Monaco, monospace;
@@ -133,6 +132,41 @@ a:hover {
   padding: 0 5px 0 0;
   color: #666;
 }
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3);
+}
+ 
+.icon-globe:before { content: '\e80a'; } /* '' */
+.icon-menu:before { content: '\f008'; } /* '' */
 
 /* Base
 ----------------------------------------------- */
@@ -181,7 +215,6 @@ code {
 
 /* Header : Name
 ----------------------------------------------- */
-
 
 .timeline-inner {
     border-left: 1px solid #eee;
@@ -235,47 +268,6 @@ code {
 .glitch:after {
   font-family: fontello;
   content: "\e80a";
-  position: absolute;
-  left: 1px;
-  text-shadow: -1px 0 #e74a3b;
-  top: 0;
-  color: #000;
-  background: #fff;
-  overflow: hidden;
-  clip: rect(0,900px,0,0);
-  animation: noise-anim 2s infinite linear alternate-reverse;
-}
-
-.not-found {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-}
-
-
-.glitch-404 {
-  font-size: 60px;
-  font-weight: 700;
-  color: #000;
-  position: relative;
-}
-
-.glitch-404:before {
-  font-family: fontello;
-  content: attr(data-text);
-  position: absolute;
-  left: 1px;
-  text-shadow: 1px 0 #4e73df;
-  top: 0;
-  color: #000;
-  background: #fff;
-  overflow: hidden;
-  clip: rect(0,900px,0,0);
-  animation: noise-anim-2 3s infinite linear alternate-reverse;
-}
-.glitch-404:after {
-  font-family: fontello;
-  content: attr(data-text);
   position: absolute;
   left: 1px;
   text-shadow: -1px 0 #e74a3b;
@@ -414,11 +406,6 @@ select:focus {
   pointer-events: none;
 }
 
-@keyframes blinker {
-  36% { opacity: .16; }
-}
-
-
 /* timeline : Index
 ----------------------------------------------- */
 
@@ -429,7 +416,6 @@ select:focus {
 .timeline table {
   width: 100%;
 }
-
 
 table tr td {
   padding-bottom: 1em; /* 1.0em */
@@ -572,17 +558,6 @@ table {
 
 /* Effects - Responsive Easing
 ----------------------------------------------- */
-
-body {
-  transition: all .4s cubic-bezier(0.86, 0, 0.07, 1);
-  -o-transition: all .4s cubic-bezier(0.86, 0, 0.07, 1);
-  -moz-transition: all .4s cubic-bezier(0.86, 0, 0.07, 1);
-  -webkit-transition: all .4s cubic-bezier(0.86, 0, 0.07, 1);
-  color: #141414;
-  background: #f8f8f8;
-  background: #fff;
-}
-
 select {
   color: #141414;
 }
@@ -633,38 +608,3 @@ a:focus, a:hover, tr:hover, tr:hover a, select:hover, select:focus, .lbClose:hov
   50% { opacity: .57; }
   100% { opacity: 1; }
 }
-
- [class^="icon-"]:before, [class*=" icon-"]:before {
-  font-family: "fontello";
-  font-style: normal;
-  font-weight: normal;
-  speak: never;
- 
-  display: inline-block;
-  text-decoration: inherit;
-  width: 1em;
-  margin-right: .2em;
-  text-align: center;
-  /* opacity: .8; */
- 
-  /* For safety - reset parent styles, that can break glyph codes*/
-  font-variant: normal;
-  text-transform: none;
- 
-  /* fix buttons height, for twitter bootstrap */
-  line-height: 1em;
-
- 
-  /* you can be more comfortable with increased icons size */
-  /* font-size: 120%; */
- 
-  /* Font smoothing. That was taken from TWBS */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
- 
-  /* Uncomment for 3D effect */
-  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
-}
- 
-.icon-globe:before { content: '\e80a'; } /* '' */
-.icon-menu:before { content: '\f008'; } /* '' */

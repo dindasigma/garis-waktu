@@ -213,6 +213,11 @@ screen and (max-width : 1024px) and (orientation: landscape)
     display: none;
   }
 
+  .details {
+      padding: 5%;
+      width: 90%;
+  }
+
   .timeline {
     margin-left: 1.25em;
     padding-left: 1.25em;

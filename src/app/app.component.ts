@@ -3,7 +3,6 @@ import { Component } from '@angular/core';
 import { routeTransitionAnimations } from './route-transition-animation';
 import { AppService } from './app.service'
 
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -22,7 +21,6 @@ export class AppComponent {
   ]
 
   constructor(public router: Router, private appService: AppService) {
-
   }
 
   ngOnInit() {
@@ -39,5 +37,6 @@ export class AppComponent {
 
   changeCategory(newCategory?: string) {
     this.appService.nextCategory(newCategory)
+    this.appService.updateScrollY(0)
   }
 }

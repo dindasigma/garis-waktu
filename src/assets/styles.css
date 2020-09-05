@@ -120,7 +120,6 @@ a {
   -webkit-transition-duration: 300ms;
   transition-duration: 300ms;
   padding: 0 5px 0 0;;
-  color: #666;
 }
 
 a:hover {
@@ -130,7 +129,6 @@ a:hover {
   background-repeat: no-repeat;
   background-position: 0% 100%;
   padding: 0 5px 0 0;
-  color: #666;
 }
 
 [class^="icon-"]:before, [class*=" icon-"]:before {
@@ -195,11 +193,6 @@ a:link, a:visited {
 
 a:hover, a:active {
   color: #141414;
-}
-
-code {
-  font-size: 18px;
-  line-height: 1em;
 }
 
 /* Container

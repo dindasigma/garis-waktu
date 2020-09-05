@@ -11,6 +11,9 @@ export class AppService {
     private category = new BehaviorSubject('All');
     selectedCategory = this.category.asObservable();
 
+    private scrollY = new BehaviorSubject(0);
+    currentScrollY = this.scrollY.asObservable();
+
     constructor(private googleSheetsDbService: GoogleSheetsDbService) {
         this.googleSheetsDbService.get(
             environment.spreadsheetId, environment.worksheetId, eventAttributesMapping)
@@ -34,5 +37,9 @@ export class AppService {
 
     nextCategory(newCategory: string) {
         this.category.next(newCategory)
+    }
+
+    updateScrollY(value: number): void {
+        this.scrollY.next(value);
     }
 }

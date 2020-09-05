@@ -7,23 +7,18 @@ screen and (max-width : 1024px) and (orientation: landscape)
   body, select, table .trWhen {
   	font-size: 14px;
   }
-  .trWhere {
+  .trWhere, .trWhat .where-small  {
     display: none;
   }
 
-  .trWhat .where-small {
-    display: block;
-  }
-
   #name {
-      font-size: 25px;
-      padding: 0 10px;
+    font-size: 25px;
+    padding: 0 10px;
   }
 
   .not-found {
     left: 40%;
   }
-
 }
 
 /* Responsive : iPad
@@ -31,11 +26,8 @@ screen and (max-width : 1024px) and (orientation: landscape)
 
 @media screen and (max-width : 1024px) and (orientation: landscape)
 {
-  .trWhere {
+  .trWhere, .trWhat .where-small {
     display: block;
-  }
-  .trWhat .where-small {
-    display: none;
   }
 }
 
@@ -48,7 +40,6 @@ screen and (max-width : 1024px) and (orientation: landscape)
     font-size: 25px;
     padding: 0 10px;
   }
- 
   .not-found {
     left: 40%;
   }
@@ -66,7 +57,6 @@ screen and (max-width : 1024px) and (orientation: landscape)
     font-size: 25px;
     padding: 0 10px;
   }
-
   .not-found {
     left: 40%;
   }
@@ -81,20 +71,16 @@ screen and (max-width : 1024px) and (orientation: landscape)
   body, select {
     font-size: 14px;
   }
-
   .trWhen {
     display: none;
   }
   .trWhat .when-small {
     display: block;
   }
-
   #name {
     font-size: 25px;
     padding: 0 10px;
-
   }
-
   .not-found {
     left: 40%;
   }
@@ -110,7 +96,6 @@ screen and (max-width : 1024px) and (orientation: landscape)
   .trWhere {
     display: block;
   }
-
   .trWhat .where-small {
     display: none;
   }
@@ -120,7 +105,6 @@ screen and (max-width : 1024px) and (orientation: landscape)
   body, select {
     font-size: 14px;
   }
-
   .trWhen {
     display: none;
   }
@@ -131,8 +115,7 @@ screen and (max-width : 1024px) and (orientation: landscape)
   #name {
     font-size: 25px;
     padding: 0 10px;
-
-   }
+  }
   .not-found {
     left: 40%;
   }
@@ -146,8 +129,7 @@ screen and (max-width : 1024px) and (orientation: landscape)
 {
   .trWhen, .trWhere {
     display: block;
-  }
-  
+  } 
   .trWhat .where-small, .trWhat .when-small {
     display: none;
   }
@@ -157,24 +139,19 @@ screen and (max-width : 1024px) and (orientation: landscape)
   body, select {
     font-size: 14px;
   }
-
   .trWhen, .trWhere {
     display: none;
   }
-  
   .trWhat .where-small, .trWhat .when-small {
     display: block;
   }
-
   .trWhat {
     padding-right: 1em;
   }
-
   #name {
     font-size: 25px;
     padding: 0 10px;
   }
-  
   .not-found {
     left: 40%;
   }
@@ -206,18 +183,14 @@ screen and (max-width : 1024px) and (orientation: landscape)
   .not-found {
     left: 40%;
   }
-
-  
   /* iPhone X browser overflow-x fix */
   #name {
     display: none;
   }
-
   .details {
       padding: 5%;
       width: 90%;
   }
-
   .timeline {
     margin-left: 1.25em;
     padding-left: 1.25em;

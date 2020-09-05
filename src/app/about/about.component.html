@@ -1,0 +1,23 @@
+<div class="timeline details" *ngIf="!event; else loading">
+    <h3>About</h3>
+
+    <p [innerHTML]="event.details">Bagi saya pribadi, program ini bermanfaat
+        untuk membantu saya mengetahui posisi waktu suatu kejadian dalam sejarah. Kontennya saya garap sendiri
+        berdasarkan buku-buku yang saya baca.
+    </p>
+    <p>
+        <a href="https://github.com/dindasigma/garis-waktu" target="_blank"><i class="icon-github-circled"></i></a>
+        <a href="mailto:dindasigma@gmail.com" target="_blank"><i class="icon-email"></i></a>
+    </p>
+
+</div>
+
+<ng-template #loading>
+    <div class="loading">
+        <div class="ball-pulse">
+            <div class="loader">
+                <div class="ball"></div>
+            </div>
+        </div>
+    </div>
+</ng-template>

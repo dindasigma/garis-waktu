@@ -164,7 +164,9 @@ a:hover {
  
 .icon-globe:before { content: '\e80a'; } /* '' */
 .icon-menu:before { content: '\f008'; } /* '' */
-
+.icon-github-circled:before { content: '\e800'; } /* '' */
+.icon-email:before { content: '\e801'; } /* '' */
+.icon-info-circled-alt:before { content: '\f086'; } /* '' */
 /* Base
 ----------------------------------------------- */
 
@@ -205,7 +207,7 @@ a:hover, a:active {
   width: auto;
 }
 
-/* Header : Name
+/* Header : Name and About
 ----------------------------------------------- */
 
 #name {
@@ -220,7 +222,19 @@ a:hover, a:active {
 
 }
 
-#name a {
+.about {
+  position: fixed;
+  right: 20px;
+  bottom: 2em;
+}
+
+.about a i {
+  color: #666;
+  font-size: 110%;
+
+}
+
+#name a, .about a {
   text-decoration: none;
   background: none;
 }
@@ -455,9 +469,32 @@ tr:hover {
   font-size: 90%;
 } 
 
+.details {
+    padding: 5% 15%;
+    width: 40%;
+}
+
+.details h3 {
+    font-size: 120%;
+    font-weight: 700;
+}
+
 .details h3 a {
   text-decoration: none;
   background: none;
+}
+
+.details .when {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.details .where {
+    font-weight: 400;
+    font-style: italic;
+}
+
+.details p {
+    margin-top: 30px;
 }
 
 /* Effects : Loader

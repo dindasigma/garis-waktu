@@ -12,13 +12,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { GoogleSheetsDbService } from 'ng-google-sheets-db';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { EventDetailComponent } from './event-detail/event-detail.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EventListComponent,
     NotFoundComponent,
-    EventDetailComponent
+    EventDetailComponent,
+    AboutComponent
   ],
   imports: [
     FormsModule,

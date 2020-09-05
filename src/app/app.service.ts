@@ -8,6 +8,7 @@ import { BehaviorSubject } from 'rxjs';
 @Injectable()
 export class AppService {
     private events: Event[] = [];
+    private about = '';
     private category = new BehaviorSubject('All');
     selectedCategory = this.category.asObservable();
 

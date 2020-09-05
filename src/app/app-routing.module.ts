@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { EventListComponent } from './event-list/event-list.component'
+import { AboutComponent } from './about/about.component'
 import { EventDetailComponent } from './event-detail/event-detail.component'
 import { NotFoundComponent } from './not-found/not-found.component'
 
@@ -9,6 +10,11 @@ const routes: Routes = [
     path: '',
     component: EventListComponent,
     data: { animationState: 'One' }
+  },
+  {
+    path: 'about',
+    component: AboutComponent,
+    data: { animationState: 'Two' }
   },
   {
     path: 'detail/:url',

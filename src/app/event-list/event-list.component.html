@@ -7,7 +7,7 @@
         <td class="trWhere"></td>
       </tr>
 
-      <tr *ngFor="let event of events" class="events" routerLink="/detail/{{ event.url }}">
+      <tr *ngFor="let event of events" class="events" routerLink="/detail/{{ event.url }}" id="{{ event.url }}">
         <td class="trWhen">{{ event.when }}</td>
         <td class="trWhat">
           <div class="when-small">{{ event.when }}</div>

@@ -1,7 +1,30 @@
 <div class="timeline details" *ngIf="event; else loading">
+    <div class="nav-bottom">
+        <a class="no-underline left" routerLink="/detail/{{ prev.url }}" *ngIf="prev">
+            <span [innerHTML]="prev.what | striphtml"></span>
+        </a>
+
+        <a class="no-underline right" routerLink="/detail/{{ next.url }}" *ngIf="next">
+            <span [innerHTML]="next.what | striphtml"></span>
+        </a>
+    </div>
+
     <div class="when">{{ event.when }}</div>
     <h3 [innerHTML]="event.what"></h3>
-    <div class="where">{{ event.where }}</div>
+
+    <figure class="img-figure" *ngIf="event.is_photo != ''">
+        <div class="img-container">
+            <div class="img-wrapper">
+                <div class="img" style="background-image:url('assets/img/{{ event.is_photo }}')"></div>
+                <div class="img" style="background-image:url('assets/img/{{ event.is_photo }}')"></div>
+                <div class="img" style="background-image:url('assets/img/{{ event.is_photo }}')"></div>
+                <div class="img" style="background-image:url('assets/img/{{ event.is_photo }}')"></div>
+                <div class="img" style="background-image:url('assets/img/{{ event.is_photo }}')"></div>
+
+            </div>
+        </div>
+        <figcaption [innerHTML]="event.photo_credit"></figcaption>
+    </figure>
 
     <p [innerHTML]="event.details"></p>
 </div>

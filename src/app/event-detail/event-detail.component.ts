@@ -11,14 +11,31 @@ import { Event } from '../app.model';
   styleUrls: ['./event-detail.component.css']
 })
 export class EventDetailComponent implements OnInit {
+  selectedCategory = 'Politic';
 
   constructor(private appService: AppService, private route: ActivatedRoute,) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.appService.selectedCategory.subscribe(
+      selectedCategory => this.selectedCategory = selectedCategory
+    )
+    console.log(this.selectedCategory)
   }
 
   get event(): Event {
     return this.appService.getEvent(this.route.snapshot.params['url'])
   }
+
+  get next(): Event {
+    var current: number = +this.appService.getEvent(this.route.snapshot.params['url']).id;
+    return this.appService.getEventById(current + 1)
+  }
+
+  get prev(): Event {
+    var current: number = +this.appService.getEvent(this.route.snapshot.params['url']).id;
+    return this.appService.getEventById(current - 1)
+  }
+
+
 
 }

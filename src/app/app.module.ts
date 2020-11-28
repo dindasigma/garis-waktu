@@ -6,6 +6,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppService } from './app.service';
 import { AppComponent } from './app.component';
+import { StripHtmlPipe } from './app.pipe';
+
 import { EventListComponent } from './event-list/event-list.component';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -17,6 +19,7 @@ import { AboutComponent } from './about/about.component';
 @NgModule({
   declarations: [
     AppComponent,
+    StripHtmlPipe,
     EventListComponent,
     NotFoundComponent,
     EventDetailComponent,

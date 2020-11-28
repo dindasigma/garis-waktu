@@ -5,6 +5,9 @@ export const eventAttributesMapping = {
     which: 'Which',
     url: 'URL',
     details: 'Details',
+    is_photo: 'IsPhoto',
+    photo_credit: 'PhotoCredit',
+    id: 'Id',
 };
 
 export interface Event {
@@ -14,4 +17,7 @@ export interface Event {
     which: string;
     url: string;
     details: string;
+    is_photo: string;
+    photo_credit: string;
+    id: number;
 }

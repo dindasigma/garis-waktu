@@ -22,10 +22,10 @@
   </nav>
 
   <ng-template #menulink>
-    <div class="menu">
+    <div class="menu Technology">
       <select dir="rtl" #categories (change)='changeCategory(categories.value)' [(ngModel)]='selectedCategory'>
-        <option *ngFor="let o of options">
-          {{o.name}}
+        <option *ngFor="let o of options" [innerHTML]="o.name">
+          
         </option>
       </select>
     </div>

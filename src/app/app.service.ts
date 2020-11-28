@@ -31,6 +31,11 @@ export class AppService {
             .filter(e => e.which.includes(which))
     }
 
+    getEventById(id: number): Event {
+        return this.events
+            .find(e => e.id == id)
+    }
+
     getEvent(url: string): Event {
         return this.events
             .find(e => e.url == url)

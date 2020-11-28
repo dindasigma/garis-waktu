@@ -159,6 +159,8 @@ screen and (max-width : 1024px) and (orientation: landscape)
   main {
     max-width: 375px; /* match media query width */
   } 
+
+  
 }
 
 /* Responsive : iPhone SE
@@ -169,6 +171,14 @@ screen and (max-width : 1024px) and (orientation: landscape)
 {
   body, select, table .trWhen {
     font-size: 14px;
+  }
+
+  .img-figure .img-container {
+    padding: 2rem;
+  }
+
+  .img-wrapper {
+    height: 150px;
   }
 
   .trWhere {

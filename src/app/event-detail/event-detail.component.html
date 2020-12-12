@@ -1,40 +1,66 @@
 <div class="timeline details" *ngIf="event; else loading">
-    <div class="nav-bottom">
-        <a class="no-underline left" routerLink="/detail/{{ prev.url }}" *ngIf="prev">
-            <span [innerHTML]="prev.what | striphtml"></span>
-        </a>
+  <div class="when">{{ event.when }}</div>
+  <div class="where">{{ event.where }}</div>
+  <h3 [innerHTML]="event.what"></h3>
 
-        <a class="no-underline right" routerLink="/detail/{{ next.url }}" *ngIf="next">
-            <span [innerHTML]="next.what | striphtml"></span>
-        </a>
+  <figure class="img-figure" *ngIf="event.is_photo != ''">
+    <div class="img-container">
+      <div class="img-wrapper">
+        <div
+          class="img"
+          style="background-image:url('assets/img/{{ event.is_photo }}')"
+        ></div>
+        <div
+          class="img"
+          style="background-image:url('assets/img/{{ event.is_photo }}')"
+        ></div>
+        <div
+          class="img"
+          style="background-image:url('assets/img/{{ event.is_photo }}')"
+        ></div>
+        <div
+          class="img"
+          style="background-image:url('assets/img/{{ event.is_photo }}')"
+        ></div>
+        <div
+          class="img"
+          style="background-image:url('assets/img/{{ event.is_photo }}')"
+        ></div>
+      </div>
     </div>
+    <figcaption [innerHTML]="event.photo_credit"></figcaption>
+  </figure>
 
-    <div class="when">{{ event.when }}</div>
-    <h3 [innerHTML]="event.what"></h3>
+  <p [innerHTML]="event.details"></p>
+</div>
 
-    <figure class="img-figure" *ngIf="event.is_photo != ''">
-        <div class="img-container">
-            <div class="img-wrapper">
-                <div class="img" style="background-image:url('assets/img/{{ event.is_photo }}')"></div>
-                <div class="img" style="background-image:url('assets/img/{{ event.is_photo }}')"></div>
-                <div class="img" style="background-image:url('assets/img/{{ event.is_photo }}')"></div>
-                <div class="img" style="background-image:url('assets/img/{{ event.is_photo }}')"></div>
-                <div class="img" style="background-image:url('assets/img/{{ event.is_photo }}')"></div>
-
-            </div>
-        </div>
-        <figcaption [innerHTML]="event.photo_credit"></figcaption>
-    </figure>
-
-    <p [innerHTML]="event.details"></p>
+<div class="pagination">
+  <ul>
+    <li class="prev">
+      <span>
+        <a routerLink="/detail/{{ prev.url }}" *ngIf="prev" rel="prev">
+          <i>Prev</i>
+          <small [innerHTML]="prev.what | striphtml"></small>
+        </a>
+      </span>
+    </li>
+    <li class="next">
+      <span>
+        <a routerLink="/detail/{{ next.url }}" *ngIf="next" rel="next">
+          <i>Next</i>
+          <small [innerHTML]="next.what | striphtml"></small>
+        </a>
+      </span>
+    </li>
+  </ul>
 </div>
 
 <ng-template #loading>
-    <div class="loading">
-        <div class="ball-pulse">
-            <div class="loader">
-                <div class="ball"></div>
-            </div>
-        </div>
+  <div class="loading">
+    <div class="ball-pulse">
+      <div class="loader">
+        <div class="ball"></div>
+      </div>
     </div>
+  </div>
 </ng-template>

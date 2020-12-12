@@ -177,9 +177,6 @@ body, select {
   font-weight: 300;
   font-size: 18px;
   line-height: 1.5em;
-  xletter-spacing: -0.0125em; /* no */
-  xletter-spacing: -0.0175em; /* ok */
-  letter-spacing: -0.025em; /* original, tightest, tho resembles helvetica */
 }
 
 select {
@@ -209,6 +206,21 @@ a:hover, a:active {
 
 /* Header : Name and About
 ----------------------------------------------- */
+@-webkit-keyframes Gradient {
+  0%  {background-position:0% 50%}
+  50% {background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@-moz-keyframes Gradient {
+0%  {background-position:0% 50%}
+  50% {background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes Gradient { 
+0%  {background-position:0% 50%}
+  50% {background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
 
 #name {
   float: left;
@@ -216,20 +228,27 @@ a:hover, a:active {
   padding: 0 20px;
   z-index: 5;
   height: 100%;
-  border-right: 1px solid #eee;
-  background: white;
-  font-size: 40px;
-
+  background: linear-gradient(24deg,#00F260, #7bfce6, #0575E6);
+  background-size: 400% 100%;
+  -webkit-animation: Gradient 2s ease infinite;
+  -moz-animation: Gradient 2s ease infinite;
+  animation: Gradient 2s ease infinite;
+  /*    -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;*/
+  font-size: 30px;
 }
 
+
 .about {
-  position: fixed;
-  right: 20px;
+  position: absolute;
+  padding-left: 5px;
   bottom: 2em;
+  z-index: 110;
+  font-size: 16px;
 }
 
 .about a i {
-  color: #666;
+  color:black;
   font-size: 110%;
 
 }
@@ -244,6 +263,15 @@ a:hover, a:active {
   color: #000;
   position: relative;
   line-height: 1;
+}
+
+#name .logo {
+  writing-mode: vertical-rl;  
+  -webkit-transform:rotate(180deg);
+    -moz-transform:rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform:rotate(180deg);
+    transform: rotate(180deg);
 }
 
 figure {
@@ -670,82 +698,6 @@ a.no-underline {
   }
 }
 
-
-.glitch:before {
-  font-family: fontello;
-  content: "\e80a";
-  position: absolute;
-  left: 1px;
-  text-shadow: 1px 0 #4e73df;
-  top: 0;
-  color: #000;
-  background: #fff;
-  overflow: hidden;
-  clip: rect(0,900px,0,0);
-  animation: noise-anim-2 3s infinite linear alternate-reverse;
-}
-.glitch:after {
-  font-family: fontello;
-  content: "\e80a";
-  position: absolute;
-  left: 1px;
-  text-shadow: -1px 0 #e74a3b;
-  top: 0;
-  color: #000;
-  background: #fff;
-  overflow: hidden;
-  clip: rect(0,900px,0,0);
-  animation: noise-anim 2s infinite linear alternate-reverse;
-}
-
-@-webkit-keyframes noise-anim{
-  0%{clip:rect(89px,9999px,100px,0)}
-  5%{clip:rect(4px,9999px,62px,0)}
-  10%{clip:rect(43px,9999px,16px,0)}
-  15%{clip:rect(2px,9999px,68px,0)}
-  20%{clip:rect(12px,9999px,6px,0)}
-  25%{clip:rect(89px,9999px,25px,0)}
-  30%{clip:rect(15px,9999px,38px,0)}
-  35%{clip:rect(57px,9999px,97px,0)}
-  40%{clip:rect(24px,9999px,72px,0)}
-  45%{clip:rect(81px,9999px,3px,0)}
-  50%{clip:rect(93px,9999px,26px,0)}
-  55%{clip:rect(68px,9999px,85px,0)}
-  60%{clip:rect(43px,9999px,28px,0)}
-  65%{clip:rect(44px,9999px,11px,0)}
-  70%{clip:rect(17px,9999px,33px,0)}
-  75%{clip:rect(74px,9999px,66px,0)}
-  80%{clip:rect(100px,9999px,4px,0)}
-  85%{clip:rect(92px,9999px,31px,0)}
-  90%{clip:rect(93px,9999px,98px,0)}
-  95%{clip:rect(23px,9999px,77px,0)}
-  100%{clip:rect(92px,9999px,8px,0)}
-}
-
-@keyframes noise-anim{
-  0%{clip:rect(89px,9999px,100px,0)}
-  5%{clip:rect(4px,9999px,62px,0)}
-  10%{clip:rect(43px,9999px,16px,0)}
-  15%{clip:rect(2px,9999px,68px,0)}
-  20%{clip:rect(12px,9999px,6px,0)}
-  25%{clip:rect(89px,9999px,25px,0)}
-  30%{clip:rect(15px,9999px,38px,0)}
-  35%{clip:rect(57px,9999px,97px,0)}
-  40%{clip:rect(24px,9999px,72px,0)}
-  45%{clip:rect(81px,9999px,3px,0)}
-  50%{clip:rect(93px,9999px,26px,0)}
-  55%{clip:rect(68px,9999px,85px,0)}
-  60%{clip:rect(43px,9999px,28px,0)}
-  65%{clip:rect(44px,9999px,11px,0)}
-  70%{clip:rect(17px,9999px,33px,0)}
-  75%{clip:rect(74px,9999px,66px,0)}
-  80%{clip:rect(100px,9999px,4px,0)}
-  85%{clip:rect(92px,9999px,31px,0)}
-  90%{clip:rect(93px,9999px,98px,0)}
-  95%{clip:rect(23px,9999px,77px,0)}
-  100%{clip:rect(92px,9999px,8px,0)}
-}
-
 /* Main
 ----------------------------------------------- */
 
@@ -868,6 +820,9 @@ tr:hover {
   width: 80%;
   min-width: 9em;
   font-weight: 700;
+  xletter-spacing: -0.0125em; /* no */
+  xletter-spacing: -0.0175em; /* ok */
+  letter-spacing: -0.025em; /* original, tightest, tho resembles helvetica */
 }
 
 .trWhat .when-small {
@@ -906,8 +861,11 @@ tr:hover {
 }
 
 .details h3 {
-    font-size: 120%;
-    font-weight: 700;
+  font-size: 120%;
+  font-weight: 700;
+  xletter-spacing: -0.0125em; /* no */
+  xletter-spacing: -0.0175em; /* ok */
+  letter-spacing: -0.025em; /* original, tightest, tho resembles helvetica */
 }
 
 .details h3 a {
@@ -1068,3 +1026,19 @@ a:focus, a:hover, tr:hover, tr:hover a, select:hover, select:focus, .lbClose:hov
   50% { opacity: .57; }
   100% { opacity: 1; }
 }
+
+.pagination{ width: 100%; border-top: 1px solid #eee; font-size: 0; }
+.pagination ul{ font-size: 0; display: table; width: 100%; }
+.pagination ul li{ text-align: center; display: table-cell; width: 50%; box-shadow: 1px 1px 0px 0px rgba(0,0,0,.1); height: 230px; vertical-align: middle; }
+.pagination ul li span{ padding: 0 60px; display: inline-block; }
+
+.pagination ul li a i{display: block; font-size: 14px; text-align: left;}
+
+.pagination ul li i:before{ content: ""; display: block; position: absolute; width: 30px; height: 2px; background: #eee; }
+
+.pagination ul li.next a i:before{ right: 6px; top: -1px; }
+.pagination ul li.prev a i:before{ left: 6px; top: -1px; }
+.pagination ul li a{ display: inline-block; background: none;}
+
+.pagination ul li a small{ font-size: 18px; border-bottom: 1px dotted rgba(0,0,0,0.1); line-height: 30px; }
+.pagination ul li a:hover small{ border-bottom: 1px solid rgba(0,0,0,.2); }

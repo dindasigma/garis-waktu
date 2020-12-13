@@ -1,8 +1,10 @@
 # Garis Waktu
 
-Program ini secara umum bertujuan untuk memberi tahu kembali tentang masa lalu yang membentuk dunia kita, menunjukkan bahwa situasi kita saat ini tidak bersifat alamiah maupun abadi, bahwa dulu keadaannya pernah sangat jauh berbeda.
+Menjelaskan bagaimana masa lalu yang membentuk dunia kita masih merupakan sebuah misteri. Yang pasti dulu keadaannya pernah sangat jauh berbeda dan situasi kita saat ini tidak abadi. Kita sadar bahwa segala sesuatu bersifat sementara dan masa depan tidak dapat diprediksi.
 
-Kontennya saya garap sendiri berdasarkan buku-buku yang saya baca. Bagi saya pribadi, program ini bermanfaat untuk membantu saya mengingat kejadian dalam sejarah, hanya semacam hobi. Tidak untuk menjabarkan, mengaitkan, apalagi meramalkan suatu kejadian.
+Saya suka belajar sejarah dan meraih pengetahuan sebanyak yang saya mampu. Projek ini adalah basis data pengetahuan saya untuk mengingat penggalan-penggalan kejadian masa silam atau pengetahuan universal tentang dunia. Kontennya berasal dari buku-buku yang saya baca dan film dokumenter yang saya tonton.
+
+Kontennya masih jauh dari sempurna, saya terus berusaha meminimalisasi teori dan persepsi, dan memaksimalkan fakta (walau saya tidak tahu apakah saya akan bisa mencapainya). Pesan saya jangan pernah berhenti untuk mewaspadai bias, prakonsepsi, dan ilusi dalam ilmu sejarah. Menyukai sejarah bukan berarti buta akan hal itu.
 
 [waktu.dinda.id](https://waktu.dinda.id/)
 

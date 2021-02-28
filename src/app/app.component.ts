@@ -13,11 +13,10 @@ export class AppComponent {
   selectedCategory = 'All';
 
   options = [
-    { name: "All", value: "All" },
-    { name: "Politic", value: "Politic" },
-    { name: "Religion", value: "Religion" },
-    { name: "Science", value: "Science" },
-    { name: "Technology", value: "Technology" }
+    { name: "All"},
+    { name: "Science/Technology" },
+    { name: "Philosophy/Religion" },
+    { name: "Politics/Society"},
   ]
 
   constructor(public router: Router, private appService: AppService) {

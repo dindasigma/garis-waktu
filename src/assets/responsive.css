@@ -19,6 +19,10 @@ screen and (max-width : 1024px) and (orientation: landscape)
   .not-found {
     left: 40%;
   }
+
+  .details {
+    width: 70%;
+  }
 }
 
 /* Responsive : iPad
@@ -28,6 +32,10 @@ screen and (max-width : 1024px) and (orientation: landscape)
 {
   .trWhere, .trWhat .where-small {
     display: block;
+  }
+
+  .details {
+    width: 70%;
   }
 }
 
@@ -42,6 +50,10 @@ screen and (max-width : 1024px) and (orientation: landscape)
   }
   .not-found {
     left: 40%;
+  }
+
+  .details {
+    width: 70%;
   }
 }
 
@@ -59,6 +71,10 @@ screen and (max-width : 1024px) and (orientation: landscape)
   }
   .not-found {
     left: 40%;
+  }
+
+  .details {
+    width: 70%;
   }
 }
 
@@ -84,6 +100,11 @@ screen and (max-width : 1024px) and (orientation: landscape)
   .not-found {
     left: 40%;
   }
+
+  .details {
+    width: 70%;
+  }
+  
 }
 
 
@@ -98,6 +119,10 @@ screen and (max-width : 1024px) and (orientation: landscape)
   }
   .trWhat .where-small {
     display: none;
+  }
+
+  .details {
+    width: 70%;
   }
 }
 @media screen and (max-width : 414px) and (orientation: portrait)
@@ -119,6 +144,10 @@ screen and (max-width : 1024px) and (orientation: landscape)
   .not-found {
     left: 40%;
   }
+
+  .details {
+    width: 70%;
+  }
 }
 
 /* Responsive : iPhone 6
@@ -132,6 +161,10 @@ screen and (max-width : 1024px) and (orientation: landscape)
   } 
   .trWhat .where-small, .trWhat .when-small {
     display: none;
+  }
+
+  .details {
+    width: 70%;
   }
 }
 @media screen and (max-width : 375px) and (orientation: portrait)
@@ -160,7 +193,9 @@ screen and (max-width : 1024px) and (orientation: landscape)
     max-width: 375px; /* match media query width */
   } 
 
-  
+  .details {
+    width: 70%;
+  }
 }
 
 /* Responsive : iPhone SE

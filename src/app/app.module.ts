@@ -11,7 +11,7 @@ import { StripHtmlPipe } from './app.pipe';
 import { EventListComponent } from './event-list/event-list.component';
 
 import { HttpClientModule } from '@angular/common/http';
-import { GoogleSheetsDbService } from 'ng-google-sheets-db';
+import { API_KEY, GoogleSheetsDbService } from 'ng-google-sheets-db';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { EventDetailComponent } from './event-detail/event-detail.component';
 import { AboutComponent } from './about/about.component';
@@ -33,7 +33,14 @@ import { AboutComponent } from './about/about.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [GoogleSheetsDbService, AppService],
+  providers: [
+    {
+      provide: API_KEY,
+      useValue: 'AIzaSyC7BGIhrC1Kh_jHawMgGxeYMVxLjhNrKYg',
+    },
+    GoogleSheetsDbService,
+    AppService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   spreadsheetId: '15Md4lVJ5dbEOx720XbGNWB3uimFvfC6r-R8d5V9H4zc',
-  worksheetId: 1
+  worksheetId: 'events'
 };
 
 /*

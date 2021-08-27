@@ -93,9 +93,8 @@ screen and (max-width : 1024px) and (orientation: landscape)
   .trWhat .when-small {
     display: block;
   }
-  #name {
-    font-size: 25px;
-    padding: 0 10px;
+  #name, .next small, .prev small {
+    display: none;
   }
   .not-found {
     left: 40%;
@@ -137,9 +136,8 @@ screen and (max-width : 1024px) and (orientation: landscape)
     display: block;
   }
 
-  #name {
-    font-size: 25px;
-    padding: 0 10px;
+  #name, .next small, .prev small {
+    display: none;
   }
   .not-found {
     left: 40%;
@@ -181,9 +179,8 @@ screen and (max-width : 1024px) and (orientation: landscape)
   .trWhat {
     padding-right: 1em;
   }
-  #name {
-    font-size: 25px;
-    padding: 0 10px;
+  #name, .next small, .prev small {
+    display: none;
   }
   .not-found {
     left: 40%;
@@ -229,12 +226,12 @@ screen and (max-width : 1024px) and (orientation: landscape)
     left: 40%;
   }
   /* iPhone X browser overflow-x fix */
-  #name {
+  #name, .next small, .prev small {
     display: none;
   }
   .details {
       padding: 5%;
-      width: 90%;
+      width: 80%;
   }
   .timeline {
     margin-left: 1.25em;
